@@ -19,7 +19,7 @@ export const UserInfo = styled(motion.div)`
   gap: 1rem;
   max-height: 60vh;
   position: fixed;
-  top: 5rem;
+  top: 8rem;
   left: 5%;
 `;
 export const Form = styled.form`
@@ -74,5 +74,6 @@ export const Posts = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-top: 3rem;
+  text-align: center;
+  margin-top: 6rem;
 `;

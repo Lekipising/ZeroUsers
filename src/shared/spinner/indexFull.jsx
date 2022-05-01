@@ -6,7 +6,7 @@ export const SpinnerFull = () => {
     <section
       style={{
         height: '100vh',
-        width: '100vw',
+        width: '100%',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',

@@ -11,6 +11,7 @@ export const Post = styled(motion.div)`
 `;
 export const Title = styled.h2`
   cursor: default;
+  text-align: left;
 `;
 export const Body = styled.p`
   cursor: default;

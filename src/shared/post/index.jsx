@@ -1,5 +1,5 @@
 import React from 'react';
-import { Title, Body, Post } from './index.styles';
+import { Title, Body, Post, Pic } from './index.styles';
 
 export default function OnePost({ post }) {
   return (

@@ -1,23 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from 'react';
 import { Section, OneUser } from './index.styles';
 import { Spinner } from 'src/shared/spinner';
 import { AiOutlineUser } from 'react-icons/ai';
 import { useHistory } from 'react-router-dom';
 import { USER } from 'src/routes';
 
-export const UsersTable = () => {
-  const [users, setUsers] = useState(null);
+export default function UsersTable({ users }) {
   const history = useHistory();
-
-  useEffect(() => {
-    const url = 'https://jsonplaceholder.typicode.com/users';
-    axios.get(url).then((response) => setUsers(response.data));
-  }, []);
-
-  useEffect(() => {
-    console.log('users', users);
-  }, [users]);
 
   return (
     <Section>
@@ -33,15 +22,13 @@ export const UsersTable = () => {
             key={user.id}
             initial={{ scaleX: 0.8 }}
             whileInView={{ scaleX: 1, transition: { duration: 0.5 } }}
-            viewport={{ once: true }}
           >
             <AiOutlineUser className="icon" />
             <span>{user.name}</span>
+            <span className="view">View user</span>
           </OneUser>
         ))
       )}
     </Section>
   );
-};
-
-export default UsersTable;
+}
