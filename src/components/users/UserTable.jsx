@@ -31,6 +31,9 @@ export const UsersTable = () => {
           <OneUser
             onClick={() => history.push(`${USER}/${user.id}`)}
             key={user.id}
+            initial={{ scaleX: 0.8 }}
+            whileInView={{ scaleX: 1, transition: { duration: 0.5 } }}
+            viewport={{ once: true }}
           >
             <AiOutlineUser className="icon" />
             <span>{user.name}</span>

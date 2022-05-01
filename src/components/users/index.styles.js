@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion/dist/framer-motion';
 
 export const Section = styled.section`
   width: 100%;
@@ -15,7 +16,7 @@ export const Section = styled.section`
   }
 `;
 
-export const OneUser = styled.div`
+export const OneUser = styled(motion.div)`
   width: 200px;
   height: 50px;
   border-radius: 5px;
